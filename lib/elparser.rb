@@ -339,7 +339,7 @@ module Elparser
   def self._encode(arg)
     return "nil" if arg.nil?
     c = arg.class
-    if c ==  Fixnum then
+    if c ==  Integer then
       return SExpNumber.new :INTEGER, arg.to_s
     elsif c ==  Float then
       return SExpNumber.new :FLOAT, arg.to_s
